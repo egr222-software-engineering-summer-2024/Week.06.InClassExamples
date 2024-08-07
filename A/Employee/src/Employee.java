@@ -9,7 +9,7 @@ public class Employee {
     }
 
     public int getVacationDays() {
-        return 10;           // 2 weeks' paid vacation
+        return 10;           // 2 weeks paid vacation
     }
 
     public String getVacationForm() {
