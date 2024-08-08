@@ -15,6 +15,16 @@ public class Point {
         this.y = y;
     }
 
+    @Override
+    public boolean equals(Object o) {            // still bad
+        if (o instanceof Point) {                // returns ASYMMETRIC results when compared to a child class
+            Point other = (Point) o;
+            return x == other.x && y == other.y;
+        } else {
+            return false;
+        }
+    }
+
     public int getX() {
         return x;
     }
@@ -47,14 +57,5 @@ public class Point {
     //@Override
     public String toString() {
         return "(" + x + ", " + y + ")";
-    }
-
-    public boolean equals(Object o) {            // still bad
-        if (o instanceof Point) {                // returns ASYMMETRIC results when compared to a child class
-            Point other = (Point) o;
-            return x == other.x && y == other.y;
-        } else {
-            return false;
-        }
     }
 }

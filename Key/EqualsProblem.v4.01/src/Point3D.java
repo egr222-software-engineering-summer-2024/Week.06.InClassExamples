@@ -10,6 +10,7 @@ public class Point3D extends Point{
         return "(" + getX() + ", " + getY() + ", " + z + ")";
     }
 
+    @Override
     public boolean equals(Object o) {            // still bad
         if (o instanceof Point3D) {              // returns ASYMMETRIC results when compared to a parent class
             Point3D other = (Point3D) o;

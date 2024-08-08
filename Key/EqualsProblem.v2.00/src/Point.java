@@ -6,7 +6,6 @@ public class Point {
     //All constructors must initialize all data of a class!
     //default constructor
     public Point() {
-
         this(0, 0);
     }
 
@@ -14,6 +13,15 @@ public class Point {
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+//    @Override
+    public boolean equals(Point other) {       // bad
+        if (x == other.x && y == other.y) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int getX() {
@@ -48,13 +56,5 @@ public class Point {
     //@Override
     public String toString() {
         return "(" + x + ", " + y + ")";
-    }
-
-    public boolean equals(Point other) {       // bad
-        if (x == other.x && y == other.y) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
