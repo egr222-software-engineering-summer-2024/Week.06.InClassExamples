@@ -1,23 +1,32 @@
 public class EmployeeClient {
 
     public static void main(String[] args) {
-	    Employee e = new Employee(0);
-		Lawyer l = new Lawyer(5);
+	    Employee e = new Employee(5);
 	    Secretary s = new Secretary(5);
-		Marketer m = new Marketer(5);
-		LegalSecretary ls = new LegalSecretary(8);
+	    Lawyer l = new Lawyer(5);
+	    Marketer m = new Marketer(5);
+	    LegalSecretary ls = new LegalSecretary(5);
 
 		printInfo(e);
-		printInfo(l);
-		l.sue();
 
-		printInfo(s);
+		System.out.println();
+
+		printInfo(s);	// print info for Secretary
 		s.takeDictation("Meeting notes");
 
-		printInfo(m);
+		System.out.println();
+
+		printInfo(l);	// print info for Lawyer
+		l.sue();
+
+		System.out.println();
+
+		printInfo(m);	// print info for Marketer
 		m.advertise();
 
-		printInfo(ls);
+		System.out.println();
+
+		printInfo(ls);	// print info for Legal Secretary
 		ls.takeDictation("Legal meeting notes");
 		ls.fileLegalBriefs();
     }
@@ -26,6 +35,5 @@ public class EmployeeClient {
 		System.out.println("salary: " + e.getSalary());
 		System.out.println("v.days: " + e.getVacationDays());
 		System.out.println("v.form: " + e.getVacationForm());
-//		System.out.println();
 	}
 }

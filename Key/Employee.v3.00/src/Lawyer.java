@@ -1,6 +1,6 @@
 // A class to represent lawyers
 public class Lawyer extends Employee {
-    // overrides getVacationForm method in Employee class
+    @Override
     public String getVacationForm() {
         return "pink";
     }

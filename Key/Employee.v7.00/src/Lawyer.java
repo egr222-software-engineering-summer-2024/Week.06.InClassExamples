@@ -4,14 +4,15 @@ public class Lawyer extends Employee {
         super(years);
     }
 
-    // overrides getVacationForm method in Employee class
+    @Override
     public String getVacationForm() {
         return "pink";
     }
 
     @Override
     public int getVacationDays() {
-        return 15;  // 3 weeks vacation
+        int baseVacationDays = super.getVacationDays();
+        return baseVacationDays + 5;           // Base vacation plus 5 days (1 week)
     }
 
     @Override

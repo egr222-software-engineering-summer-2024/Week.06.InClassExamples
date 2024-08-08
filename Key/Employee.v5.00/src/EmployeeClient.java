@@ -1,13 +1,13 @@
-public class EmployeeMain {
+public class EmployeeClient {
 
     public static void main(String[] args) {
-	    Employee e = new Employee();
-	    Secretary s = new Secretary();
-	    Lawyer l = new Lawyer();
-	    Marketer m = new Marketer();
-	    LegalSecretary ls = new LegalSecretary();
+		Employee e = new Employee(5);
+		Lawyer l = new Lawyer(5);
+		Secretary s = new Secretary();
+		Marketer m = new Marketer(5);
+		LegalSecretary ls = new LegalSecretary();
 
-	    System.out.println("Employee salary: " + e.getSalary());
+		System.out.println("Employee salary: " + e.getSalary());
 		System.out.println("Secretary salary: " + s.getSalary());
 		System.out.println("Lawyer salary: " + l.getSalary());
 		System.out.println("Marketer salary: " + m.getSalary());
@@ -31,9 +31,10 @@ public class EmployeeMain {
 
 		System.out.println();
 
-	    s.takeDictation("Meeting notes");
+		s.takeDictation("Meeting notes");
 		l.sue();
 		m.advertise();
+		ls.takeDictation("Legal meeting notes");
 		ls.fileLegalBriefs();
     }
 }

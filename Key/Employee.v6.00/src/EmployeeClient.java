@@ -1,4 +1,4 @@
-public class EmployeeMain {
+public class EmployeeClient {
 
     public static void main(String[] args) {
 	    Employee e = new Employee(5);
@@ -34,6 +34,7 @@ public class EmployeeMain {
 	    s.takeDictation("Meeting notes");
 		l.sue();
 		m.advertise();
+		ls.takeDictation("Legal meeting notes");
 		ls.fileLegalBriefs();
     }
 }
