@@ -58,4 +58,9 @@ public class Point {
             return false;
         }
     }
+
+    @Override
+    public int hashCode() {
+        return 31513 * x + y;
+    }
 }

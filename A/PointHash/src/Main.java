@@ -6,17 +6,21 @@ public class Main {
         Point p1 = new Point(4,5);
         Point p2 = new Point(4,5);
         Point p3 = new Point(5,4);
+        Point p4 = new Point(8,9);
 
         // When hashCode has NOT been overridden (default) two points with same
         // coordinates (same "state") will have different hashCodes
         System.out.println("p1.hashCode is " + p1.hashCode());
         System.out.println("p2.hashCode is " + p2.hashCode());
         System.out.println("p3.hashCode is " + p3.hashCode());
+        System.out.println("p4.hashCode is " + p4.hashCode());
 
         System.out.println("\nTest against hashCode contract (p1,p2)");
         testAgainstHashCodeContract(p1, "p1", p2, "p2");
         System.out.println("\nTest against hashCode contract (p1,p3)");
         testAgainstHashCodeContract(p1, "p1", p3, "p3");
+        System.out.println("\nTest against hashCode contract (p1,p4)");
+        testAgainstHashCodeContract(p1, "p1", p4, "p4");
 
 //        Point p = new Point(4,5);
 //        Set<Point> set = new HashSet<>();
