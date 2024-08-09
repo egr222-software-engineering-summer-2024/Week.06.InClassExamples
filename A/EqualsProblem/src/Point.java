@@ -31,6 +31,14 @@ public class Point {
         this.y = y;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj != null && getClass() == obj.getClass()) {
+            Point p = (Point) obj;
+            return x == p.x && y == p.y;
+        } else return false;
+    }
+
     //translates x coordinates by dX
     //translates y coordinates by dY
     public void translate(int dX, int dY){
